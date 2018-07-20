@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="app-phone">
-      <app-header :step="step" @cancel="goHome"></app-header>
+      <app-header :step="step" @cancel="goHome" @next="nextStep"></app-header>
       <app-body 
         :posts="posts" 
         :filters="filters"
@@ -63,6 +63,9 @@ export default {
       this.selectedFilter = "";
       this.caption = "";
       this.step = 1;
+    },
+    nextStep() {
+      this.step++;
     }
   },
   created() {

@@ -7,7 +7,12 @@
       <i class="fas fa-search fa-lg"></i>
     </div>
     <div class="upload-cta">
-      <input type="file" id="file" name="file" class="inputfile" @change ="handleChange($event)"/>
+      <input type="file" 
+        id="file" 
+        name="file" 
+        class="inputfile" 
+        @change ="handleChange($event)"
+        :disabled="step === 2 || step === 3"/>
       <label for="file">
         <i class="far fa-plus-square fa-lg"></i>
       </label>

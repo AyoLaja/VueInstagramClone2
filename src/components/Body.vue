@@ -20,6 +20,21 @@
                 </app-filter-type>
             </div>
         </div>
+        <div v-else>
+            <div class="selected-image"
+                :class="selectedFilter"
+                :style="{backgroundImage: 'url(' + image + ')'}">
+            </div>
+            <div class="caption-container">
+                <textarea type="text" 
+                    id="" 
+                    cols="30" 
+                    rows="10" 
+                    class="caption-input"
+                    placeholder="Type in a caption">
+                </textarea>
+            </div>
+        </div>
     </div>
 </template>
 

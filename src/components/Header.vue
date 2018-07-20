@@ -8,7 +8,7 @@
         </a>
         <a class="next-cta"
             v-if="step === 2"
-            @click="step++">
+            @click="handleNext">
             Next
         </a>
     </div>
@@ -24,6 +24,9 @@ export default {
     methods: {
         handleCancel() {
             this.$emit('cancel', this.step)
+        }, 
+        handleNext() {
+            this.$emit('next', this.step)
         }
     }
 }
