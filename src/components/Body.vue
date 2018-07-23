@@ -1,6 +1,6 @@
 <template>
     <div class="phone-body">
-        <div class="feed" v-if="step === 1">
+        <div class="feed" v-if="step === 1" v-dragscroll.y>
             <app-vuegram 
                 v-for="(post, index) in posts"
                 :post="post"
@@ -12,7 +12,7 @@
                 :class="selectedFilter"
                 :style="{backgroundImage: 'url(' + image + ')'}">
             </div>
-            <div class="filter-container">
+            <div class="filter-container" v-dragscroll.x>
                 <app-filter-type v-for="(filter, index) in filters"
                     :filter="filter"
                     :image="image"
