@@ -11,6 +11,11 @@
             @click="handleNext">
             Next
         </a>
+        <a class="next-cta" 
+            v-if="step === 3"
+            @click="handleShare">
+            Share
+        </a>
     </div>
 </template>
 
@@ -27,6 +32,9 @@ export default {
         }, 
         handleNext() {
             this.$emit('next', this.step)
+        },
+        handleShare() {
+            this.$emit('share', this.step)
         }
     }
 }

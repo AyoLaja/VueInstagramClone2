@@ -31,7 +31,9 @@
                     cols="30" 
                     rows="10" 
                     class="caption-input"
-                    placeholder="Type in a caption">
+                    placeholder="Type in a caption"
+                    :value="value"
+                    @input="handleCaptionInput($event)">
                 </textarea>
             </div>
         </div>
@@ -62,6 +64,14 @@ export default {
         },
         selectedFilter: {
             type: String
+        },
+        value: {
+            type: String
+        }
+    },
+    methods: {
+        handleCaptionInput(event) {
+            this.$emit('input', event.target.value);
         }
     }
 }
