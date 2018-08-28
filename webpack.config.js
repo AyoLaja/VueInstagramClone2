@@ -11,7 +11,7 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: './index/html', to: 'relative/path/to/dest/' }
+      { from: './index.html', to: 'relative/path/to/dest/' }
     ])
   ],
   module: {
